@@ -1,4 +1,4 @@
-name: "🚚 Build / Push / Deploy"
+name: "Build / Push / Deploy"
 
 on:
   workflow_dispatch:
@@ -20,7 +20,7 @@ permissions:
 jobs:
 
   hello:
-    name: "👋 - Starting"
+    name: "Starting"
     runs-on: ubuntu-latest  
     steps:
     - name: Starting
@@ -29,7 +29,7 @@ jobs:
         echo "Starting CI/CD of ${{ github.repository }}"  
         
   build:
-    name: "🚧 - Build & Test"
+    name: "Build & Test"
     needs: hello    
     runs-on: ubuntu-latest  
 
@@ -57,7 +57,7 @@ jobs:
           path: target/calculator-service-*.jar
 
   build_publish_container:
-    name: "🐳 - Push container image to GitHub Packages"
+    name: "Push container image to GitHub Packages"
     runs-on: ubuntu-latest
     needs:
       - build
@@ -170,7 +170,7 @@ jobs:
       service_account: ${{ secrets.SERVICE_ACCOUNT }}
 
   bye:
-    name: "👋 - Goodbye"
+    name: "Goodbye"
     needs: [ deploy-to-azure-aci, deploy-to-aws-ecs ]
     runs-on: ubuntu-latest  
     #needs: [ deploy-to-kube-aks, deploy-to-kube-gke, deploy-to-kube-gke-production,deploy-to-kube-aks-production]
