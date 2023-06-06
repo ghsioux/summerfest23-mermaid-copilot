@@ -1,0 +1,28 @@
+{
+    "name": "Summerfest 2023 devcontainer",
+  
+    "image": "mcr.microsoft.com/devcontainers/go:0-1.20-bullseye",
+  
+    "features": {
+      "ghcr.io/devcontainers/features/sshd:1": {},
+      "ghcr.io/devcontainers/features/python:1": {}
+    },
+  
+    "customizations": {
+      "vscode": {
+
+        "settings": { 
+        },
+        
+        "extensions": [
+          "github.copilot-nightly",
+          "ms-python.python",
+          "golang.go",
+          "github.vscode-github-actions",
+          "github.copilot-chat"
+        ]
+      }
+    },
+
+    "remoteUser": "vscode"
+  }
