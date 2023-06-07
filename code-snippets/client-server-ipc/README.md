@@ -1,4 +1,8 @@
-Prompt: Generate a Go program with 2 system processes from this mermaid diagram, all the messages must be sent through channels in the correct order:
+## How-to
+
+Open the Copilot Chat and ask the following (including the Mermaid diagram):
+
+Generate a Go program with 2 system processes from this mermaid diagram, all the messages must be sent through channels in the correct order:
 
 ```mermaid
 sequenceDiagram
